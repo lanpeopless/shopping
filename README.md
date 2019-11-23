@@ -1,4 +1,4 @@
-# Angular 实战拼多多
+# Angular 实战 商城-快递-代购
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.0-beta.11.
 
