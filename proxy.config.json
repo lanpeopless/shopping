@@ -1,0 +1,10 @@
+{
+    "/shopping": {
+        "target": "http://localhost:2019",
+        "secure": false
+    },    
+    "/shopping1": {
+        "target": "http://47.102.223.176",
+        "secure": false
+    }
+}
