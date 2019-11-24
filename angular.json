@@ -23,7 +23,8 @@
               "src/assets"
             ],
             "styles": [
-              "node_modules/ng-zorro-antd-mobile/src/ng-zorro-antd-mobile.min.css",
+              "src/custom-theme.scss",
+              "src/theme.less",
               "src/styles.css"
             ],
             "scripts": [],
@@ -85,7 +86,7 @@
               "src/assets"
             ],
             "styles": [
-              "node_modules/ng-zorro-antd-mobile/src/ng-zorro-antd-mobile.min.css",
+              "src/theme.less",
               "src/styles.css"
             ],
             "scripts": []

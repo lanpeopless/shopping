@@ -51,7 +51,9 @@ const routes: Routes = [
    */
   imports: [
     // 使用环境变量配置在不同环境下是否激活路由跟踪
-    RouterModule.forRoot(routes, { enableTracing: !environment.production })
+    RouterModule.forRoot(routes, 
+      { enableTracing: !environment.production }
+      )
   ],
   exports: [RouterModule]
 })

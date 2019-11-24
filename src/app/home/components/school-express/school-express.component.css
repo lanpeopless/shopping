@@ -1,0 +1,8 @@
+@charset "utf-8";
+
+InputItem {
+    border-bottom: 1px solid gainsboro;
+}
+.tabs /deep/ .am-tabs-default-bar {
+    height: 6%;
+}

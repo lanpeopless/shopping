@@ -3,7 +3,7 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false,
+  production: true,
   baseUrl: 'http://39.106.75.209/api',
   shop: '/shopping',
   icode: 'AEB7EEC6958F7D90',

@@ -38,6 +38,8 @@ export class HomeContainerComponent implements OnInit {
 
   topMenus$: Observable<TopMenu[]>;
   selectedTabLink$: Observable<string>;
+  flag = true;
+  index = 1;
 
   ngOnInit(): void {
     this.service.getTabs().subscribe( res => {
@@ -48,6 +50,22 @@ export class HomeContainerComponent implements OnInit {
       filter(params => params.has('tabLink')),
       map(params => params.get('tabLink'))
     );
+  }
+
+  onChange(item) {
+    console.log('onChange', item);
+  }
+
+  onTabClick(item) {
+    console.log('onTabClick', item);
+  }
+
+  selectCard(e) {
+    console.log(' ', JSON.stringify(e));
+  }
+
+  changeIndex() {
+    this.index = 0;
   }
 
   handleTabSelected(topMenu: TopMenu) {

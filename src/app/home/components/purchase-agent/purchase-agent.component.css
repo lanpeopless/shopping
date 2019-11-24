@@ -1,0 +1,22 @@
+InputItem {
+    border-bottom: 1px solid gainsboro;
+}
+
+
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.purchase /deep/ .am-icon-xxs {
+    margin-top: 6px;
+}
+
+.purchase /deep/ .am-stepper.showNumber .am-stepper-input {
+    margin-top: 6px;
+}

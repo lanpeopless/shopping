@@ -23,6 +23,7 @@ import {
 } from './directives';
 import { AgoPipe } from './pipes';
 import { DialogModule } from '../dialog';
+import { NgZorroAntdMobileModule } from 'ng-zorro-antd-mobile';
 
 @NgModule({
   declarations: [

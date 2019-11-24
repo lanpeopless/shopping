@@ -1,10 +1,127 @@
-<p>
-  专人专办
-</p>
-<p>
-  快递代取
-</p>
-<p>
-  快递代送
-</p>
+<app-image-slider [sliders]="imageSliders$ | async"> </app-image-slider>
+<Tabs class="tabs" [page]="3" [useOnPan]="true" [swipeable]="true" [activeTab]="index"
+  (onChange)="onChange($event)" (onTabClick)="onTabClick($event)">
+  <TabPane [title]="titleTemplate">
+    <ng-template #titleTemplate>
+      <Badge >
+        <div>专人专办</div>
+      </Badge>
+    </ng-template>
+    <div style="display: flex; align-items: center;justify-content: center;height: 100%;background-color: #fff">
+      Content of 专人专办
+    </div>
+  </TabPane>
+  <TabPane [title]="titleTemplate1">
+    <ng-template #titleTemplate1>
+      <Badge>
+        <div>快递代取</div>
+      </Badge>
+    </ng-template>
+    <div style="height: 100%;background-color: #fff">
+      <div style="width: 100%;">
+        <InputItem [placeholder]="'姓名'" [focus]="titleFocus" [content]="contentlabel1">
+          <ng-template #contentlabel1>
+            <span (click)="clickTitle()">姓名</span>
+          </ng-template>
+        </InputItem>      
+      </div>
+      <div style="width: 100%;">
+        <InputItem [placeholder]="'电话'" [focus]="titleFocus" [content]="contentlabel2">
+          <ng-template #contentlabel2>
+            <span (click)="clickTitle()">电话</span>
+          </ng-template>
+        </InputItem>      
+      </div>
+      <div style="width: 100%;">
+        <InputItem [placeholder]="'取货地点'" [focus]="titleFocus" [content]="contentlabel3">
+          <ng-template #contentlabel3>
+            <span (click)="clickTitle()">取货地点</span>
+          </ng-template>
+        </InputItem>      
+      </div>
+      <div style="width: 100%;">
+        <InputItem [placeholder]="'取货码'" [focus]="titleFocus" [content]="contentlabel4">
+          <ng-template #contentlabel4>
+            <span (click)="clickTitle()">取货码</span>
+          </ng-template>
+        </InputItem>
+      </div>      
+      <div style="width: 100%;">
+        <InputItem [placeholder]="'送货时间'" [focus]="titleFocus" [content]="contentlabel5">
+          <ng-template #contentlabel5>
+            <span (click)="clickTitle()">送货时间</span>
+          </ng-template>
+        </InputItem>
+      </div>      
+      <div style="width: 100%;">
+      <List [className]="'date-picker-list'">
+        <ListItem DatePicker [extra]="currentDateFormat(value)" [arrow]="'horizontal'" [mode]="'datetime'" [(ngModel)]="value"
+          (onOk)="onOk($event)">
+          Datetime
+          <Brief>{{ name }}</Brief>
+        </ListItem>
+      </List>
+      </div>
+      <div style="width: 100%;text-align: center;margin-top: 15%;">
+          <div Button style="margin:0 auto;" [type]="'primary'" [inline]="true" >提交下单</div>
+      </div>
+    </div>
+  </TabPane>
+  <TabPane [title]="titleTemplate2">
+    <ng-template #titleTemplate2>
+      <Badge>
+        <div>快递代送</div>
+      </Badge>
+    </ng-template>
+    <div style="height: 100%;background-color: #fff">
+        <div style="width: 100%;">
+          <InputItem [placeholder]="'姓名'" [focus]="titleFocus" [content]="contentlabel1">
+            <ng-template #contentlabel1>
+              <span (click)="clickTitle()">姓名</span>
+            </ng-template>
+          </InputItem>
+        </div>
+        <div style="width: 100%;">
+          <InputItem [placeholder]="'电话'" [focus]="titleFocus" [content]="contentlabel2">
+            <ng-template #contentlabel2>
+              <span (click)="clickTitle()">电话</span>
+            </ng-template>
+          </InputItem>
+        </div>
+        <div style="width: 100%;">
+          <InputItem [placeholder]="'送货地点'" [focus]="titleFocus" [content]="contentlabel6">
+            <ng-template #contentlabel6>
+              <span (click)="clickTitle()">送货地点</span>
+            </ng-template>
+          </InputItem>
+        </div>
+        <div style="width: 100%;">
+          <InputItem [placeholder]="'货品内容'" [focus]="titleFocus" [content]="contentlabel7">
+            <ng-template #contentlabel7>
+              <span (click)="clickTitle()">货品内容</span>
+            </ng-template>
+          </InputItem>
+        </div>
+        <div style="width: 100%;">
+          <InputItem [placeholder]="'送货时间'" [focus]="titleFocus" [content]="contentlabel5">
+            <ng-template #contentlabel5>
+              <span (click)="clickTitle()">送货时间</span>
+            </ng-template>
+          </InputItem>
+        </div>
+        <div style="width: 100%;">
+          <List [className]="'date-picker-list'">
+            <ListItem DatePicker [extra]="currentDateFormat(value)" [arrow]="'horizontal'" [mode]="'datetime'"
+              [(ngModel)]="value" (onOk)="onOk($event)">
+              Datetime
+              <Brief>{{ name }}</Brief>
+            </ListItem>
+          </List>
+        </div>
+        <div style="width: 100%;text-align: center;margin-top: 15%;">
+          <div Button style="margin:0 auto;" [type]="'primary'" [inline]="true">提交下单</div>
+        </div>
+    </div>
+  </TabPane>
+</Tabs>
 
